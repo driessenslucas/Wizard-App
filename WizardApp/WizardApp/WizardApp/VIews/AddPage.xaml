@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="WizardApp.VIews.AddPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="White" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid
+                    Grid.Row="1"
+                    Margin="8"
+                    Padding="8">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Orientation="Horizontal">
+                        <Label
+                            x:Name="lblName"
+                            Text="Name: "
+                            TextColor="Black" />
+                    </StackLayout>
+                    <Frame     Grid.Row="2"
+                        Grid.ColumnSpan="2" CornerRadius="12" Padding="12,0,12,0" HasShadow="True">
+                        <Editor
+                        x:Name="EditName" TextColor="Black"
+                        FontSize="Medium"
+                        HorizontalOptions="Fill"
+                        Keyboard="Text"
+                        VerticalOptions="Fill"  />
+                        </Frame>
+                    <StackLayout
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        Orientation="Horizontal">
+                        <Label
+                            x:Name="lblEffect"
+                            Text="effect: "
+                            TextColor="Black" />
+                    </StackLayout>
+                    <Frame Grid.Row="4"
+                        Grid.ColumnSpan="2" CornerRadius="12" Padding="12,0,12,0" HasShadow="True">
+                        <Editor
+                        x:Name="editEffect"
+                        TextColor="Black"
+                        FontSize="Medium"
+                        HorizontalOptions="Fill"
+                        Keyboard="Text"
+                        VerticalOptions="Fill" />
+                    </Frame>
+                    <StackLayout
+                        Grid.Row="5"
+                        Grid.Column="1"
+                        Orientation="Horizontal">
+                        <Label
+                            x:Name="lblSideEffect"
+                            Text="side effect: : "
+                            TextColor="Black" />
+                    </StackLayout>
+                    <Frame 
+                        Grid.Row="6"
+                        Grid.ColumnSpan="2" CornerRadius="12" Padding="12,0,12,0" HasShadow="True">
+                        <Editor
+                        x:Name="editSideEffect"
+                        FontSize="Medium" TextColor="Black"
+                        HorizontalOptions="Fill"
+                        Keyboard="Text"
+                        VerticalOptions="Fill" />
+                    </Frame>
+                    <StackLayout
+                        Grid.Row="7"
+                        Grid.Column="1"
+                        Orientation="Horizontal">
+                        <Label
+                            x:Name="lblCharacteristics"
+                            Text="Characteristics: "
+                            TextColor="Black" />
+                    </StackLayout>
+                    <Frame 
+                        Grid.Row="8"
+                        Grid.ColumnSpan="2" CornerRadius="12" Padding="12,0,12,0" HasShadow="True">
+                        <Editor
+                        x:Name="editCharacteristics"
+                        FontSize="Medium" TextColor="Black"
+                        HorizontalOptions="Fill"
+                        Keyboard="Text"
+                        VerticalOptions="Fill" />
+                    </Frame>
+                    <StackLayout
+                        Grid.Row="9"
+                        Grid.Column="1"
+                        Orientation="Horizontal">
+                        <Label
+                            x:Name="lblTime"
+                            Text="Time: "
+                            TextColor="Black" />
+                    </StackLayout>
+                    <Frame 
+                        Grid.Row="10"
+                        Grid.ColumnSpan="2" CornerRadius="12" Padding="12,0,12,0" HasShadow="True">
+                        <Editor
+                        x:Name="editTime"
+                        FontSize="Medium" TextColor="Black"
+                        HorizontalOptions="Fill"
+                        Keyboard="Text"
+                        VerticalOptions="Fill" />
+                    </Frame>
+                    <StackLayout
+                        Grid.Row="11"
+                        Grid.Column="1"
+                        Orientation="Horizontal">
+                        <Label
+                            x:Name="lblDifficulty"
+                            Text="Difficulty: "
+                            TextColor="Black" />
+                    </StackLayout>
+                    <!--<Editor x:Name="editDifficulty" Keyboard="Text" FontSize="Medium" VerticalOptions="Fill" HorizontalOptions="Fill" Grid.ColumnSpan="2" Grid.Row="12" />-->
+                    <Picker
+                        x:Name="pickDifficulty"
+                        Grid.Row="12" 
+                        Grid.ColumnSpan="2" Title="pick difficulty" TitleColor="LightGray" TextColor="Black" HorizontalTextAlignment="Center" >
+                        <Picker.Items>
+                            <x:String>Unknown</x:String>
+                            <x:String>Advanced</x:String>
+                            <x:String>Moderate</x:String>
+                            <x:String>Beginner</x:String>
+                            <x:String>OrdinaryWizardingLevel</x:String>
+                            <x:String>OneOfAKind</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <StackLayout
+                        Grid.Row="13"
+                        Grid.Column="1"
+                        Orientation="Horizontal">
+                        <Label x:Name="lblIngredients" Text="Select ingredients: " FontSize="18" TextColor="Black"/>
+                    </StackLayout>
+
+                    <ListView
+                        x:Name="lvmIngredients"
+                        Grid.Row="14"
+                        Grid.Column="1"
+                        Margin="8,0"
+                        HeightRequest="300"
+                        VerticalOptions="Center">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid>
+                                        <Label
+                                            Text="{Binding Data.Name}"
+                                            TextColor="Gray"
+                                            VerticalOptions="Center" />
+                                        <CheckBox
+                                            Grid.Column="1"
+                                            HorizontalOptions="End"
+                                            Color="LightSkyBlue"
+                                            IsChecked="{Binding lvmIngredients.Selected}"
+                                            Opacity="1" />
+
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <StackLayout
+                        Grid.Row="15"
+                        Grid.Column="1"
+                        Orientation="Horizontal">
+                        <Label x:Name="lblInventors" Text="Select inventors: " FontSize="18" TextColor="Black"/>
+                    </StackLayout>
+                    <ListView
+                        x:Name="lvmInventors"
+                        Grid.Row="16"
+                        Grid.Column="1"
+                        Margin="8,0"
+                        HeightRequest="300"
+                        VerticalOptions="Center">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid>
+                                        <Label
+                                            Text="{Binding Data.Name}"
+                                            TextColor="Gray"
+                                            VerticalOptions="Center" />
+                                        <CheckBox
+                                            Grid.Column="1"
+                                            HorizontalOptions="End" Color="LightSkyBlue"
+                                            IsChecked="{Binding lvmInventors.Selected}"
+                                            Opacity="1" />
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>
+               
+            </Grid>
+        </ScrollView>
+             <Grid Margin="8,0,8,12" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Button
+                        x:Name="btnCancel" BackgroundColor="Black"
+                        Clicked="btnCancel_Clicked" HeightRequest="70"
+                        Text="Cancel" />
+                    <Button
+                        x:Name="btnSave" BackgroundColor="Black"
+                        Grid.Column="1" HeightRequest="70"
+                        Clicked="btnSave_Clicked"
+                        Text="Save" />
+                </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

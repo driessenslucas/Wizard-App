@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="WizardApp.VIews.SpellPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False" BackgroundColor="White">
+     <ContentPage.Content>
+        <StackLayout>
+            <Grid
+                ColumnSpacing="0"
+                RowDefinitions="*, Auto"
+                RowSpacing="0">
+
+                <ActivityIndicator
+                    x:Name="loading"
+                    IsRunning="{Binding IsBusy}" Color="LightSkyBlue"
+                    Scale="0.7" />
+                <ListView
+                    x:Name="lvmSpells"
+                    Margin="8"
+                    HasUnevenRows="True"
+                    ItemSelected="lvmSpells_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame Margin="4" CornerRadius="24" HasShadow="True">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition />
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition />
+                                        </Grid.RowDefinitions>
+                                        <Label
+                                            Grid.Row="0"
+                                            Text="{Binding Name}"
+                                            TextColor="Black" />
+                                        <Label
+                                            Grid.Row="1"
+                                            FontAttributes="Bold"
+                                            HorizontalOptions="Start"
+                                            Text="{Binding Effect}"
+                                            TextColor="Black" />
+                                        <StackLayout
+                                            Grid.Row="2"
+                                            HorizontalOptions="Start"
+                                            Orientation="Horizontal"
+                                            Spacing="0">
+                                            <Label
+                                                FontAttributes="Bold"
+                                                Text="Type: "
+                                                TextColor="LightSkyBlue" />
+                                            <Label
+                                                FontAttributes="Bold"
+                                                Text="{Binding Type}"
+                                                TextColor="LightSkyBlue" />
+                                        </StackLayout>
+                                    </Grid>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <!--<Button
+                    x:Name="addSpellButton"
+                    Grid.Row="0"
+                    Margin="0,0,20,15"
+                    BorderColor="LightSkyBlue"
+                    BorderWidth="1"
+                    BackgroundColor="Black"
+                    
+                    CornerRadius="30"
+                    TextColor="White"
+                    FontFamily="FontIcons"
+                    FontSize="20"
+                    HeightRequest="56"
+                    HorizontalOptions="End"
+                    Text="+"
+                    VerticalOptions="End"
+                    WidthRequest="56" />-->
+            </Grid>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

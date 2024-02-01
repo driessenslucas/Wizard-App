@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="WizardApp.VIews.ElixirPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title=""
+    BackgroundColor="white"
+    NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Padding="0,12,0,12">
+                
+            <Label HorizontalOptions="Start" Text="Select difficulty: " TextColor="Black" Grid.Column="0" Grid.Row="0" Padding="40,5,0,-10" FontSize="18"></Label>
+            <Picker HorizontalOptions="End" WidthRequest="200"
+                x:Name="pickDifficulty"
+                SelectedIndexChanged="pickDifficulty_SelectedIndexChanged" VerticalOptions="Center" BackgroundColor="White" Margin="0,0,0,-20" Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Center" TextColor="black">
+                
+                <Picker.Items>
+                    <x:String>All</x:String>
+                    <x:String>Unknown</x:String>
+                    <x:String>Advanced</x:String>
+                    <x:String>Moderate</x:String>
+                    <x:String>Beginner</x:String>
+                    <x:String>OrdinaryWizardingLevel</x:String>
+                    <x:String>OneOfAKind</x:String>
+                </Picker.Items>
+                 </Picker>
+            </Grid>
+            <Grid
+                ColumnSpacing="0"
+                RowDefinitions="*, Auto"
+                RowSpacing="0">
+
+                <ActivityIndicator
+                    x:Name="loading"
+                    IsRunning="{Binding IsBusy}" Color="LightSkyBlue"
+                    Scale="0.7" />
+                <ListView
+                    x:Name="lvwElixirs"
+                    Margin="8"
+                    HasUnevenRows="True"
+                    ItemSelected="lvwElixirs_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame Margin="4" CornerRadius="24"  HasShadow="True">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition />
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition />
+                                        </Grid.RowDefinitions>
+                                        <Label
+                                            Grid.Row="0"
+                                            Text="{Binding Name}"
+                                            TextColor="Black" />
+                                        <Label
+                                            Grid.Row="1"
+                                            FontAttributes="Bold"
+                                            HorizontalOptions="Start"
+                                            Text="{Binding Effect}"
+                                            TextColor="Black" />
+                                        <StackLayout
+                                            Grid.Row="2"
+                                            HorizontalOptions="Start"
+                                            Orientation="Horizontal"
+                                            Spacing="0">
+                                            <Label
+                                                FontAttributes="Bold"
+                                                Text="Ingredients: "
+                                                TextColor="LightSkyBlue" />
+                                            <Label
+                                                FontAttributes="Bold"
+                                                Text="{Binding IngredientsLength}"
+                                                TextColor="LightSkyBlue" />
+                                        </StackLayout>
+                                        <StackLayout
+                                            Grid.Row="2"
+                                            HorizontalOptions="End"
+                                            Orientation="Horizontal"
+                                            Spacing="0">
+                                            <Label
+                                                FontAttributes="Bold"
+                                                Text="Difficulty: "
+                                                TextColor="Orange" />
+                                            <Label
+                                                FontAttributes="Bold"
+                                                Text="{Binding difficulty}"
+                                                TextColor="Orange" />
+                                        </StackLayout>
+                                    </Grid>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button
+                    x:Name="addElixirButton"
+                    Grid.Row="0"
+                    Margin="0,0,20,15"
+                    BorderColor="LightSkyBlue"
+                    BorderWidth="1"
+                    BackgroundColor="Black"
+                    TextColor="White"
+                    Clicked="addElixirButton_Clicked"
+                    CornerRadius="30"
+                    FontFamily="FontIcons"
+                    FontSize="20"
+                    HeightRequest="56"
+                    HorizontalOptions="End"
+                    Text="+"
+                    VerticalOptions="End"
+                    WidthRequest="56" />
+            </Grid>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+
+</ContentPage>
+

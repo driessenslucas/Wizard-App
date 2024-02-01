@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="WizardApp.VIews.SpellDetailsPage" NavigationPage.HasNavigationBar="False" BackgroundColor="White">
+    <ContentPage.Content>
+       <StackLayout>
+            
+        <Grid>
+        <Frame Grid.Row="0" CornerRadius="24" Margin="12" BackgroundColor="White" HasShadow="True" VerticalOptions="Start" HeightRequest="800">
+           
+            <StackLayout VerticalOptions="Start">
+                <Frame  CornerRadius="12"
+                             HasShadow="True" HeightRequest="20"  Padding="12">
+                    <StackLayout>
+                        <Grid>
+                            <Label 
+                            Text="Name: " Grid.Row="0" Grid.Column="0"
+                            TextColor="Black" HorizontalOptions="Start" />
+                            <Label
+                            x:Name="lblName" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0"
+                            TextColor="Black" HorizontalOptions="EndAndExpand" />
+                        </Grid>
+                    </StackLayout>
+                </Frame>
+                <Frame  CornerRadius="12" 
+                             HasShadow="True" HeightRequest="20" Padding="12" >
+                    <StackLayout>
+                        <Grid>
+                            <Label 
+                            Text="Effect: " Grid.Row="0" Grid.Column="0"
+                            TextColor="Black" HorizontalOptions="Start" />
+                            <Label
+                            x:Name="lblEffect" Grid.Column="1" Grid.ColumnSpan="2"  Grid.Row="0"
+                            TextColor="Black" HorizontalOptions="EndAndExpand" />
+                        </Grid>
+                    </StackLayout>
+                </Frame>
+                <Frame  CornerRadius="12"
+                             HasShadow="True" HeightRequest="20"  Padding="12">
+                    <StackLayout>
+                        <Grid>
+                            <Label 
+                            Text="Can Be Verbal: " Grid.Row="0" Grid.Column="0"
+                            TextColor="Black" HorizontalOptions="Start" />
+                            <Label
+                            x:Name="lblCanBeVerbal" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0"
+                            TextColor="Black" HorizontalOptions="EndAndExpand" />
+                        </Grid>
+                    </StackLayout>
+                </Frame>
+                <Frame  CornerRadius="12" 
+                             HasShadow="True" HeightRequest="20"  Padding="12">
+                    <StackLayout>
+                        <Grid>
+                            <Label 
+                            Text="Type: " Grid.Row="0" Grid.Column="0"
+                            TextColor="Black" HorizontalOptions="Start" />
+                            <Label
+                            x:Name="lblType" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0"
+                            TextColor="Black"  HorizontalOptions="EndAndExpand" />
+                        </Grid>
+                    </StackLayout>
+                </Frame>
+                <Frame  CornerRadius="12"
+                             HasShadow="True"  HeightRequest="20"  Padding="12">
+                    <StackLayout>
+                        <Grid>
+                            <Label 
+                            Text="Light: " Grid.Row="0" Grid.Column="0"
+                            TextColor="Black" HorizontalOptions="Start" />
+                            <Label
+                            x:Name="lblLight" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0"
+                            TextColor="Black" HorizontalOptions="EndAndExpand" />
+                        </Grid>
+                    </StackLayout>
+                </Frame>
+                <Frame  CornerRadius="12"
+                             HasShadow="True" HeightRequest="20"  Padding="12">
+                    <StackLayout>
+                        <Grid>
+                            <Label 
+                            Text="Creator: " Grid.Row="0" Grid.Column="0"
+                            TextColor="Black" HorizontalOptions="Start" />
+                            <Label
+                            x:Name="lblCreator" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0"
+                            TextColor="Black" HorizontalOptions="EndAndExpand" />
+                        </Grid>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </Frame>
+        </Grid>
+        <Grid Grid.Row="1" Margin="8,0,8,12">
+                     <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                   <!--<Button Grid.Column="1" VerticalOptions="Start" HorizontalOptions="End" WidthRequest="200" HeightRequest="50" CornerRadius="2" BackgroundColor="Black" x:Name="btnEdit"  Text="Edit" TextColor="White" Clicked="btnEdit_Clicked"/>-->
+                   <Button Grid.ColumnSpan="2" VerticalOptions="Start" HorizontalOptions="Center" WidthRequest="400" HeightRequest="50" CornerRadius="2" BackgroundColor="Black" x:Name="btnBack" Text="Go back" TextColor="White" Clicked="btnBack_Clicked"/>
+           </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

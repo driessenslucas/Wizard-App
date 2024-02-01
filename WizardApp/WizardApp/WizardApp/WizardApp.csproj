@@ -1,0 +1,69 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2545" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="Xam.Plugin.Connectivity" Version="4.0.0.190-beta" />
+    <PackageReference Include="Microcharts" Version="0.9.5.9" />
+    <PackageReference Include="Microcharts.Forms" Version="1.0.0-preview1" />
+    <PackageReference Include="SkiaSharp.Views" Version="2.88.3" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="2.88.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Assets\dino.jpg" />
+    <None Remove="Repositories\" />
+    <None Remove="VIews\" />
+    <None Remove="Xam.Plugin.Connectivity" />
+    <None Remove="Syncfusion.Xamarin.SfListView" />
+    <None Remove="Syncfusion.Xamarin.Core" />
+    <None Remove="Syncfusion.Licensing" />
+    <None Remove="Assets\" />
+    <None Remove="Assets\images.png" />
+    <None Remove="Microcharts" />
+    <None Remove="Microcharts.Forms" />
+    <None Remove="SkiaSharp.Views" />
+    <None Remove="SkiaSharp.Views.Forms" />
+    <None Remove="Assets\Chats.png" />
+    <None Remove="Assets\Potions.png" />
+    <None Remove="Assets\Spells.png" />
+    <None Remove="Assets\Wizards.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\dino.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\images.png" />
+    <EmbeddedResource Include="Assets\Chats.png" />
+    <EmbeddedResource Include="Assets\Potions.png" />
+    <EmbeddedResource Include="Assets\Spells.png" />
+    <EmbeddedResource Include="Assets\Wizards.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="VIews\ListPages.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="VIews\SpellPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="VIews\WizardDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="VIews\WizardPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

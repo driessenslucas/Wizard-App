@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage
+    x:Class="WizardApp.VIews.ListPages"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WizardApp.VIews" NavigationPage.HasNavigationBar="False" BarBackgroundColor="White"  SelectedTabColor="LightSkyBlue" UnselectedTabColor="Black"
+    android:TabbedPage.ToolbarPlacement="Bottom"
+    >
+    <!--  Pages can be added as references or inline  -->
+    <local:ElixirPage Title="Elixirs" x:Name="ElixirsIcon" />
+    <local:SpellPage Title="Spells" x:Name="SpellsIcon" />
+    <local:WizardPage Title="Wizards" x:Name="WizardsIcon" />
+    <local:WizardChart Title="Chart" x:Name="ChartIcon" />
+</TabbedPage>

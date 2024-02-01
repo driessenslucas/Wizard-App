@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="WizardApp.VIews.WizardChart"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+    NavigationPage.HasNavigationBar="False" BackgroundColor="White">
+    <ContentPage.Content>
+       
+                <Frame
+            Margin="9"
+            BackgroundColor="White" HasShadow="True" VerticalOptions="Start"
+            CornerRadius="24">
+                <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand">
+                    <Label x:Name="lblTitle" Text="visiual represenatation of which wizards have created the most potions" Padding="12" FontSize="20"  HorizontalOptions="Center" TextColor="Black"/>
+                    <microcharts:ChartView
+                        x:Name="chartViewBar"
+                        HeightRequest="400"
+                        HorizontalOptions="Center"
+                        Rotation="-90"
+                        VerticalOptions="Center"
+                        WidthRequest="600" />
+                </StackLayout>
+                </Frame>
+    </ContentPage.Content>
+</ContentPage>
+
